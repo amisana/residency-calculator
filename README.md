@@ -1,10 +1,10 @@
-# Time Value of Residency
+# Time Value of Residency Calculator
 
-A financial modeling tool to compare the net worth trajectories of different medical residency paths.
+An interactive financial modeling tool to compare the net worth trajectories of different medical residency paths.
 
 ## Overview
 
-This project provides a Python-based financial model to analyze the economic impact of choosing different length residency programs. It compares:
+This web application provides an interactive financial model to analyze the economic impact of choosing different length residency programs. It compares:
 
 - 3-year residency path (shorter training, earlier attending salary)
 - 7-year residency path (longer training, higher attending salary)
@@ -15,26 +15,36 @@ The analysis accounts for:
 - Salary differences during and after residency
 - Living expenses
 
-## Usage
+## Tech Stack
+
+- React 19
+- Vite
+- Recharts (for data visualization)
+- Tailwind CSS (for styling)
+
+## Installation
 
 ```bash
 # Install dependencies
-pip install -r requirements.txt
+npm install
 
-# Run the analysis
-python residencyreturns.py
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-## Outputs
+## Features
 
-The script generates:
-1. A printed table showing net worth at different time intervals
-2. A CSV file with the detailed data (residency_comparison.csv)
-3. A visualization of net worth over time (residency_returns.png)
+- **Interactive Sliders**: Adjust financial parameters in real-time
+- **Dynamic Chart**: Visualize the impact of different choices
+- **Key Metrics**: See break-even points, crossover points, and final net worth
+- **Responsive Design**: Works on desktop and mobile devices
 
-## Assumptions
+## Default Assumptions
 
-The model uses these default assumptions:
+The model uses these default assumptions (all adjustable):
 - Initial debt: $500,000
 - Resident annual salary: $60,000
 - Post 3-year residency salary: $300,000
@@ -42,4 +52,15 @@ The model uses these default assumptions:
 - Annual living expenses: $50,000
 - Debt interest rate: 6%
 
-You can modify these values in the script to match your specific situation. 
+## Important Considerations
+
+This model provides a simplified financial comparison and doesn't account for factors like:
+- Taxes
+- Investment returns
+- Inflation
+- Specialty-specific income variations
+- Geographic differences
+- Quality of life
+- Non-monetary career satisfaction
+
+Use this as one tool among many when making residency decisions. 
